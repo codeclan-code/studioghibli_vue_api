@@ -8,7 +8,6 @@
           <p><span>Director</span>: {{film.director}}</p>
           <p><span>Producer</span>: {{film.producer}}</p>
           <p><span>Release Date</span>: {{film.release_date}}</p>
-          release_date
           <p><span v-bind:class= "film.rt_score < 50 ? 'red' : 'green'">RT Score (%): </span><span>{{ film.rt_score }}</span></p>
           <p><span>Description</span>: </p>
           <p>{{film.description}}</p>
