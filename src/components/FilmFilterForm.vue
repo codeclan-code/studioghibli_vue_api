@@ -2,7 +2,7 @@
   <form v-on:submit.prevent>
     <input type="text" v-model="search" placeholder="search for film..." v-on:keyup="searchForFilm">
     <select v-on:change="handleSelect" v-model="selectedFilm">
-      <option disabled value="">Select a film...</option>
+      <option disabled value="Select a film" selected>Select a film...</option>
       <option v-for="film in films" :value="film">{{film.title}}</option>
     </select>
   </form>
