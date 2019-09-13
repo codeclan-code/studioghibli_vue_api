@@ -2,6 +2,7 @@
   <div>
     <h1>Studio Ghibli Films</h1>
     <div class="main-container">
+      <film-filter-form :films="films" />
       <films-list :films="films"></films-list>
       <film-detail :film="selectedFilm"></film-detail>
     </div>
@@ -10,8 +11,10 @@
 
 <script>
 import { eventBus } from './main.js'
+
 import FilmDetail from './components/FilmDetail.vue'
 import FilmsList from './components/FilmsList.vue'
+import FilmFilterForm from './components/FilmFilterForm.vue'
 
 export default {
   data(){
@@ -20,6 +23,7 @@ export default {
       selectedFilm: null    }
     },
     components: {
+      "film-filter-form": FilmFilterForm,
       "films-list": FilmsList,
       "film-detail": FilmDetail
     },
@@ -37,19 +41,19 @@ export default {
 
   <style lang="css" scoped>
 
-  body {
+    body {
 
-    font-family: sans-serif;
-  }
-  h1 {
-    text-align: center;
-    color: #333;
-    font-family: sans-serif;
-  }
-  .main-container {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-  }
+      font-family: sans-serif;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      font-family: sans-serif;
+    }
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto;
+    }
   </style>
