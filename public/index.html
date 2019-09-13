@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>studioghibli api app</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but studioghibli doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>Studio Ghibli API App</title>
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+
+  // Load the Visualization API and the corechart package.
+  google.charts.load('current', {'packages':['corechart']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+  // google.charts.setOnLoadCallback(drawChart);
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Callback that creates and populates a data table,
+  // instantiates the chart, passes in the data and
+  // draws it.
+  function drawChart() {
+    var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1wP_3am3JsJFrKYogdqKAM3PxBBbhG3z9YrhMOzp9YYQ/edit#gid=0');
+    query.send(handleQueryResponse);
+  }
+
+  function handleQueryResponse(response) {
+    var data = response.getDataTable();
+    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+    // Set chart options HISTOGRAM ADD AXIS LEGENDS
+    var options = {'title':'Studio Ghibli RT Film Scores (%)',
+    'width':600,
+    'height':600,
+    'chartArea': {width: '60%'},
+  };
+    chart.draw(data, options);
+  }
+  </script>
+</head>
+<body>
+  <noscript>
+    <strong>We're sorry but studioghibli doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <div id="chart_div"></div>
+  <!--Div that will hold the chart-->
+</body>
 </html>

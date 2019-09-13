@@ -8,6 +8,7 @@
           <p><span>Release Date</span>: {{film.release_date}}</p>
           <p><span>Director</span>: {{film.director}}</p>
           <p><span>Producer</span>: {{film.producer}}</p>
+          <p><span>RT Score (%)</span>: {{film.rt_score}}</p>
           <p><span>Description</span>: </p>
           <p>{{film.description}}</p>
           <!-- <p><span>Languages</span>:</p>
@@ -18,6 +19,8 @@
       <!-- <div id="right">
       <img :src="country.flag" :alt="country.name">
     </div> -->
+    <!-- <div id="chart_div"></div> -->
+    <!--Div that will hold the pie chart-->
   </div>
 </div>
 </div>
@@ -25,7 +28,7 @@
 
 <script>
 
-import { eventBus } from '../main.js' 
+import { eventBus } from '../main.js'
 
 export default {
   name: 'film-detail',

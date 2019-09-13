@@ -3,8 +3,11 @@
     <h1>Studio Ghibli Films</h1>
     <div class="main-container">
       <film-filter-form :films="films" />
-      <films-list :films="films"></films-list>
+    </div>
+    <div class="filmDetail">
+      <!-- <films-list :films="films"></films-list> -->
       <film-detail :film="selectedFilm"></film-detail>
+
     </div>
   </div>
 </template>
@@ -56,4 +59,8 @@ export default {
       width: 80%;
       margin: 0 auto;
     }
+    .filmDetail {
+      margin-left:10%;
+    }
+
   </style>
