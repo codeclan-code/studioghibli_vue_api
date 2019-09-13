@@ -4,23 +4,15 @@
       <h2>{{film.title}}</h2>
       <div id="flexWrapper">
         <div id="left">
-          <!-- <p><span>Description</span>: {{film.description}}</p> -->
           <p><span>Release Date</span>: {{film.release_date}}</p>
           <p><span>Director</span>: {{film.director}}</p>
           <p><span>Producer</span>: {{film.producer}}</p>
-          <p><span>RT Score (%)</span>: {{film.rt_score}}</p>
+          <p><span>Release Date</span>: {{film.release_date}}</p>
+          release_date
+          <p><span v-bind:class= "film.rt_score < 50 ? 'red' : 'green'">RT Score (%): </span><span>{{ film.rt_score }}</span></p>
           <p><span>Description</span>: </p>
           <p>{{film.description}}</p>
-          <!-- <p><span>Languages</span>:</p>
-          <ul v-for="language in country.languages">
-          <li>{{language.name}}</li>
-        </ul> -->
       </div>
-      <!-- <div id="right">
-      <img :src="country.flag" :alt="country.name">
-    </div> -->
-    <!-- <div id="chart_div"></div> -->
-    <!--Div that will hold the pie chart-->
   </div>
 </div>
 </div>
@@ -37,6 +29,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.red{
+  color:red;
+}
+.green {
+  color:green;
+}
 #filmDetail {
   box-sizing: border-box;
   height: auto;
@@ -83,7 +81,7 @@ p span {
 
 div {
 
-      font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 </style>

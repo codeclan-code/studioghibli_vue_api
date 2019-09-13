@@ -21,7 +21,7 @@
   // instantiates the chart, passes in the data and
   // draws it.
   function drawChart() {
-    var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1wP_3am3JsJFrKYogdqKAM3PxBBbhG3z9YrhMOzp9YYQ/edit#gid=0');
+    var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1RZHqOtVIAOPzEEcf57qhFO72HVky-Lfo55H1bVJ_Eks/edit#gid=0');
     query.send(handleQueryResponse);
   }
 
@@ -42,9 +42,10 @@
   <noscript>
     <strong>We're sorry but studioghibli doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
-  <div id="app"></div>
+  <img src="sg.jpg" alt="Studio Ghibli Characters" style="width:10%; height:10%" />
+  <div id="app" style="border:1px solid green"></div>
   <!-- built files will be auto injected -->
-  <div id="chart_div"></div>
+  <div id="chart_div" style="border:1px solid green"></div>
   <!--Div that will hold the chart-->
 </body>
 </html>

@@ -58,6 +58,7 @@ export default {
       justify-content: space-between;
       width: 80%;
       margin: 0 auto;
+      border:1px solid red;
     }
     .filmDetail {
       margin-left:10%;
