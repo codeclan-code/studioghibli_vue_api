@@ -1,28 +1,55 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template lang="html">
+  <div>
+    <h1>Studio Ghibli Films</h1>
+    <div class="main-container">
+      <films-list :films="films"></films-list>
+      <film-detail :film="selectedFilm"></film-detail>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { eventBus } from './main.js'
+import FilmDetail from './components/FilmDetail.vue'
+import FilmsList from './components/FilmsList.vue'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  data(){
+    return {
+      films: [],
+      selectedFilm: null    }
+    },
+    components: {
+      "films-list": FilmsList,
+      "film-detail": FilmDetail
+    },
+    mounted(){
+      fetch('https://ghibliapi.herokuapp.com/films')
+      .then(res => res.json())
+      .then(films => this.films = films)
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+      eventBus.$on('film-selected', (film) => {
+        this.selectedFilm = film
+      })
+    }
+  }
+  </script>
+
+  <style lang="css" scoped>
+
+  body {
+
+    font-family: sans-serif;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+    font-family: sans-serif;
+  }
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  </style>

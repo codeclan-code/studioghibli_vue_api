@@ -1,7 +1,7 @@
 <template lang="html">
-  <div id="countriesList">
+  <div id="filmsList">
     <ul>
-      <list-component  v-for="(country, index) in countries" :country="country" :key="index"></list-component>
+      <list-component  v-for="(film, index) in films" :film="film" :key="index"></list-component>
     </ul>
   </div>
 
@@ -10,8 +10,8 @@
 <script>
 import ListComponent from './ListComponent.vue'
 export default {
-  name: 'countries-list',
-  props: ['countries'],
+  name: 'films-list',
+  props: ['films'],
   components: {
     "list-component": ListComponent
   }
@@ -26,8 +26,8 @@ export default {
     border: 1px solid #ccc;
   }
 
-  #countriesList ul {
-    margin: 10px;
+  #filmsList ul {
+    margin: 5px;
     padding: 0;
   }
 
