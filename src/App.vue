@@ -50,29 +50,4 @@ export default {
 
   <style lang="css" scoped>
 
-    body {
-
-      font-family: sans-serif;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-      font-family: sans-serif;
-    }
-    .main-container {
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
-      margin: 0 auto;
-      border:1px solid pink;
-      margin-bottom:10px;
-    }
-    .filmDetail {
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
-      margin: 0 auto;
-      border:1px solid red;
-    }
-
   </style>

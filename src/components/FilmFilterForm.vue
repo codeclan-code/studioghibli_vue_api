@@ -2,7 +2,7 @@
   <div class="searchForm">
     <form v-on:submit.prevent>
       <div class="inputSearch">
-        <input type="text" v-model="search" placeholder="search for film..." v-on:keyup="searchForFilm">
+        <input type="text" v-model="search" placeholder="search for a film..." v-on:keyup="searchForFilm">
       </div>
       <div class="selectSearch">
         <select v-on:change="handleSelect" v-model="selectedFilm">
@@ -47,24 +47,16 @@ export default {
 .searchForm{
   margin: 0 auto;
   margin-bottom:5px;
+  text-align: center;
 }
-
 .inputSearch {
-
-    margin: 0 auto;
-    margin:10px;
+  margin:10px;
 }
-
 .selectSearch {
-
-    margin: 0 auto;
+  margin:10px;
 }
-
-select, input[type="text"]{
-  font-size: 18px;
-}
-
-select {
-  margin: 0 auto;
+select, input[type="text"]
+{
+  font-size: 16px;
 }
 </style>

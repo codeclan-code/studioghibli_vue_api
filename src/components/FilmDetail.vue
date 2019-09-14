@@ -10,11 +10,11 @@
           <p><span>Release Date</span>: {{film.release_date}}</p>
           <p><span v-bind:class= "film.rt_score < 50 ? 'red' : 'green'">RT Score (%): </span><span>{{ film.rt_score }}</span></p>
           <p><span>Description</span>: </p>
-          <p>{{film.description}}</p>
+          <p class="description">{{film.description}}</p>
+        </div>
       </div>
+    </div>
   </div>
-</div>
-</div>
 </template>
 
 <script>
@@ -35,57 +35,28 @@ export default {
   color:green;
 }
 #filmDetail {
-  /* box-sizing: border-box;
+  box-sizing: border-box;
   height: auto;
-  width: 75%;
-  background: #eee;
+  xwidth: 75%;
+  background: #ECF5FD;
   color: #222;
   padding: 10px;
-  border: 1px solid #ccc; */
-      margin: 0 auto;
-}
-
-#detailWrapper {
-  /* box-sizing: border-box;
-  background: #fff;
-  padding: 10px;
-  height: 100%;
-  border-radius: 3px; */
-    margin: 0 auto;
-    border: 1px solid green;
-    padding:10px;
-    margin:10px;
-}
-
-#flexWrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-#left, #right {
-  width: 95%;
-}
-
-#right img {
-  width: 100%;
-}
-
-#left p:first-child {
-  margin-top: 0;
-}
-
-h2 {
-  margin: 10px 0 20px;
-  padding: 0;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-bottom:10px;
+  border-radius:15px;
 }
 
 p span {
   font-weight: bold;
 }
 
-div {
+p.description {
+  line-height: 120%;
+}
 
-  font-family: sans-serif;
+h2 {
+  font-size :200%;
 }
 
 </style>

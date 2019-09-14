@@ -16,24 +16,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-li {
-  /* list-style-type: none; */
-  display: block;
-  background: #fff;
-  font-size: 16px;
-  margin: 5px 0;
-  padding: 5px;
-  cursor: pointer;
-  color: #555;
-  transition: 0.1s all ease-in;
-  border-radius: 3px;
-  color:red;
-  width:auto;
-  font-family: sans-serif;
-}
 
-li:hover {
-  background: #dbe8ff;
-  color: #222;
-}
 </style>
