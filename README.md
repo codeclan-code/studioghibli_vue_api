@@ -1,6 +1,6 @@
 # studioghibli
 
-### Avaialble at
+### Available at
 
 http://mobilecms.xyz
 
