@@ -35,21 +35,26 @@ export default {
   color:green;
 }
 #filmDetail {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   height: auto;
   width: 75%;
   background: #eee;
   color: #222;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; */
+      margin: 0 auto;
 }
 
 #detailWrapper {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   background: #fff;
   padding: 10px;
   height: 100%;
-  border-radius: 3px;
+  border-radius: 3px; */
+    margin: 0 auto;
+    border: 1px solid green;
+    padding:10px;
+    margin:10px;
 }
 
 #flexWrapper {

@@ -5,9 +5,7 @@
       <film-filter-form :films="films" />
     </div>
     <div class="filmDetail">
-      <!-- <films-list :films="films"></films-list> -->
       <film-detail :film="selectedFilm"></film-detail>
-
     </div>
   </div>
 </template>
@@ -66,10 +64,15 @@ export default {
       justify-content: space-between;
       width: 80%;
       margin: 0 auto;
-      border:1px solid red;
+      border:1px solid pink;
+      margin-bottom:10px;
     }
     .filmDetail {
-      margin-left:10%;
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto;
+      border:1px solid red;
     }
 
   </style>

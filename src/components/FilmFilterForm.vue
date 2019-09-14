@@ -1,11 +1,17 @@
 <template lang="html">
-  <form v-on:submit.prevent>
-    <input type="text" v-model="search" placeholder="search for film..." v-on:keyup="searchForFilm">
-    <select v-on:change="handleSelect" v-model="selectedFilm">
-      <option disabled value="Select a film" selected>Select a film...</option>
-      <option v-for="film in films" :value="film">{{film.title}}</option>
-    </select>
-  </form>
+  <div class="searchForm">
+    <form v-on:submit.prevent>
+      <div class="inputSearch">
+        <input type="text" v-model="search" placeholder="search for film..." v-on:keyup="searchForFilm">
+      </div>
+      <div class="selectSearch">
+        <select v-on:change="handleSelect" v-model="selectedFilm">
+          <option disabled value="Select a film" selected>Select a film...</option>
+          <option v-for="film in films" :value="film">{{film.title}}</option>
+        </select>
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -38,9 +44,20 @@ export default {
 </script>
 
 <style lang="css" scoped>
-form{
-  text-align: center;
-  margin: 40px 0;
+.searchForm{
+  margin: 0 auto;
+  margin-bottom:5px;
+}
+
+.inputSearch {
+
+    margin: 0 auto;
+    margin:10px;
+}
+
+.selectSearch {
+
+    margin: 0 auto;
 }
 
 select, input[type="text"]{
@@ -48,6 +65,6 @@ select, input[type="text"]{
 }
 
 select {
-  margin-left: 20px;
+  margin: 0 auto;
 }
 </style>

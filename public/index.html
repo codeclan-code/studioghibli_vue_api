@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <title>Studio Ghibli API App</title>
@@ -30,22 +29,44 @@
     var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
     // Set chart options HISTOGRAM ADD AXIS LEGENDS
     var options = {'title':'Studio Ghibli RT Film Scores (%)',
-    'width':600,
-    'height':600,
-    'chartArea': {width: '60%'},
+    // 'width':auto,
+    // 'height':auto,
+    // 'chartArea': {width: '100%'},
   };
-    chart.draw(data, options);
-  }
-  </script>
+  chart.draw(data, options);
+}
+</script>
+<style>
+img {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+#chart_div {
+  min-height: 400px;
+  width:640px;
+  margin: 0 auto;
+}
+footer {
+  padding:10px;
+  width:40%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+</style>
 </head>
 <body>
   <noscript>
     <strong>We're sorry but Studio Ghibli doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
-  <img src="sg.jpg" alt="Studio Ghibli Characters" style="width:10%; height:10%" />
+  <img src="sg.jpg" alt="Studio Ghibli Characters" style="width:75%; height:75%" />
   <div id="app" style="border:1px solid green"></div>
   <!-- built files will be auto injected -->
   <div id="chart_div" style="border:1px solid green"></div>
   <!--Div that will hold the chart-->
-</body>
-</html>
+  <footer>
+    <small>Using <a href="https://ghibliapi.herokuapp.com/">Studio Ghibli API</a> (v1.0.1)<small>
+    </footer>
+  </body>
+  </html>
