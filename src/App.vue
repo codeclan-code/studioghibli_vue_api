@@ -21,8 +21,7 @@ export default {
   data(){
     return {
       films: [],
-      selectedFilm: null ,
-      selectedPeople: null   }
+      selectedFilm: null  }
     },
     components: {
       "film-filter-form": FilmFilterForm,
