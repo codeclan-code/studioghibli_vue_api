@@ -34,15 +34,8 @@ export default {
       .then(res => res.json())
       .then(films => this.films = films)
 
-      fetch('https://ghibliapi.herokuapp.com/people')
-      .then(res => res.json())
-      .then(people => this.people = people)
-
       eventBus.$on('film-selected', (film) => {
         this.selectedFilm = film
-      }),
-      eventBus.$on('people-selected', (people) => {
-        this.selectedPeople = people
       })
     }
   }
