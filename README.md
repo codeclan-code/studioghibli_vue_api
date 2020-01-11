@@ -2,7 +2,7 @@
 
 ### Available at
 
-http://mobilecms.xyz
+https://tosuch.xyz/studioghibli_vue_api/
 
 ## Project setup
 ```
